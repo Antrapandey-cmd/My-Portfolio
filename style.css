@@ -1,0 +1,356 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #243047;
+    line-height: 1.7;
+}
+
+/* Navigation */
+.header {
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(20, 40, 80, 0.08);
+}
+
+.navbar {
+    max-width: 1100px;
+    margin: auto;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #173b73;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #3685f5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #34435c;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #2878e8;
+}
+
+/* Home / Hero */
+.hero {
+    min-height: 540px;
+    padding: 100px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #edf5ff, #ffffff 65%, #e4efff);
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.intro,
+.section-label {
+    color: #2878e8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 58px);
+    line-height: 1.2;
+    margin: 18px 0 12px;
+    color: #172b4d;
+}
+
+.hero h1 span {
+    color: #2878e8;
+}
+
+.hero h2 {
+    font-size: clamp(18px, 3vw, 25px);
+    color: #42536e;
+    font-weight: 500;
+}
+
+.hero-description {
+    max-width: 650px;
+    margin: 22px auto 28px;
+    color: #5a6780;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background-color: #2878e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #2878e8;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #185fc1;
+    border-color: #185fc1;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #2878e8;
+}
+
+.btn-outline:hover {
+    color: #ffffff;
+}
+
+/* Common Sections */
+.section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 75px 24px;
+    text-align: center;
+}
+
+.section-light {
+    max-width: none;
+    background-color: #f5f8fd;
+}
+
+.section-light > * {
+    max-width: 1052px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    color: #172b4d;
+    font-size: 34px;
+    margin: 8px 0 28px;
+}
+
+/* About */
+.about-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 28px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #e4eaf3;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(25, 55, 100, 0.05);
+}
+
+.about-card p + p {
+    margin-top: 15px;
+}
+
+/* Education */
+.info-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 28px;
+    text-align: left;
+    background-color: #ffffff;
+    border-left: 5px solid #2878e8;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(25, 55, 100, 0.06);
+}
+
+.info-card h3,
+.project-card h3 {
+    color: #172b4d;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: #2878e8;
+    font-weight: bold;
+}
+
+/* Skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.skill-card {
+    padding: 24px 16px;
+    background-color: #ffffff;
+    border: 1px solid #e4eaf3;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(25, 55, 100, 0.10);
+}
+
+.skill-card h3 {
+    color: #2878e8;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #64718a;
+    font-size: 14px;
+}
+
+/* Project */
+.project-card {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    text-align: left;
+    background-color: #ffffff;
+    border: 1px solid #e4eaf3;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(25, 55, 100, 0.06);
+}
+
+.project-number {
+    color: #2878e8;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.project-type {
+    color: #64718a;
+    margin-bottom: 14px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.project-tags span {
+    padding: 6px 12px;
+    background-color: #edf5ff;
+    color: #245da8;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* Contact */
+.contact-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    background-color: #f5f8fd;
+    border-radius: 14px;
+}
+
+.contact-card p {
+    margin-bottom: 22px;
+}
+
+/* Footer */
+.footer {
+    padding: 22px;
+    text-align: center;
+    color: #dce7f8;
+    background-color: #172b4d;
+    font-size: 14px;
+}
+
+/* Mobile-Friendly Layout */
+@media (max-width: 760px) {
+    .navbar {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 12px 16px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 480px;
+        padding: 70px 20px;
+    }
+
+    .section {
+        padding: 55px 20px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .about-card,
+    .info-card,
+    .project-card,
+    .contact-card {
+        padding: 22px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
